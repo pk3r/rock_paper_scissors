@@ -1,9 +1,3 @@
-let playerChoice = prompt('Please choose either rock, paper or scissors').toLowerCase();
-let playerWinRound = 'You have won this round!'
-let computerWinRound = 'Computer has won this round!'
-let playerScore = 0
-let computerScore = 0
-
 function computerChoice() {
     let choices  = ['rock', 'paper', 'scissors']
     return choices[Math.floor(Math.random() * choices.length)];
@@ -27,5 +21,27 @@ function playRounds(playerChoice, computerChoice) {
     }
 } 
 
-playRounds(playerChoice, computerChoice());
+
+function game() {
+ for (i = 0; i < 20; i++) {
+    if (playerScore === 5) {
+        alert('You are the winner!')
+        break;
+    } else if (computerScore === 5) {
+        alert('Computer is the winner!')
+        break;
+    } else {
+}
+    let playerChoice = prompt('Please choose either rock, paper or scissors').toLowerCase();
+    const computerSelect = computerChoice();
+    playRounds(playerChoice, computerSelect);
+}}
+
+  
+let playerWinRound = 'You have won this round!'
+let computerWinRound = 'Computer has won this round!'
+let playerScore = 0
+let computerScore = 0
+
+game();
 
